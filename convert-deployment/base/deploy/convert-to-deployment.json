@@ -1,0 +1,4 @@
+[
+  {"op": "replace", "path": "/kind", "value": "Deployment"},
+  {"op":  "replace", "path":  "/metadata/name", "value": "my-app-deployment"}
+]
