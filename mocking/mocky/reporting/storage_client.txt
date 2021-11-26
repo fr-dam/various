@@ -1,0 +1,21 @@
+package report
+
+import (
+  "context"
+
+  "cloud.google.com/go/storage"
+)
+
+type StorageClient struct {
+  ctx    context.Context
+  client *storage.Client
+}
+
+type StorageClienter interface {
+  Write(name string, content []byte) error
+}
+
+func (c StorageClient) Write(name string, content []byte) error {
+  return nil
+}
+

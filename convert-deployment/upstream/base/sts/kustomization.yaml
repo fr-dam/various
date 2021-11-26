@@ -5,4 +5,4 @@ kind: Kustomization
 namespace: my-app
 
 resources:
-  - statefulSet.yaml
+  - statefulset.yaml

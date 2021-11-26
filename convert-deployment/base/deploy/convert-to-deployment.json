@@ -1,4 +1,5 @@
 [
   {"op": "replace", "path": "/kind", "value": "Deployment"},
-  {"op":  "replace", "path":  "/metadata/name", "value": "my-app-deployment"}
+  {"op": "remove", "path": "/spec/serviceName"},
+  {"op": "remove", "path": "/spec/volumeClaimTemplates"}
 ]

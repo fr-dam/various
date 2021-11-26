@@ -5,8 +5,8 @@ kind: Kustomization
 namespace: my-app
 
 resources:
-#  - ../../upstream/base/sts
   - ../deploy
+#  - ../../upstream/base/sts
 
 patchesStrategicMerge:
   - statefulset.yaml

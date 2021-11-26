@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "keystore-tests_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/ForgeCloud/saas/go/services/customer/org-engine/cmd/keystore-tests",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//go/common/pkg/cluster",
+        "//go/common/pkg/logging",
+        "//go/services/customer/org-engine/pkg/keystoresecrets",
+    ],
+)
+
+go_binary(
+    name = "keystore-tests",
+    embed = [":keystore-tests_lib"],
+    visibility = ["//visibility:public"],
+)
